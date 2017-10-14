@@ -1,0 +1,5 @@
+# custom modules
+mod 'ngix',
+  git: 'https://github.com/choonming/puppet-nginx.git'
+# modules from forge
+mod 'puppetlabs-ntp', '6.2.0'
