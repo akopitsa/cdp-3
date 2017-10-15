@@ -1,9 +1,6 @@
-# we can set another module directory
-# example
-# moduledir '/etc/puppetlabs/puppet/modules'
-
 # custom modules
-mod 'ngix',
+mod 'nginx',
   git: 'https://github.com/choonming/puppet-nginx.git'
 # modules from forge
 mod 'puppetlabs-ntp', '6.2.0'
+mod 'puppetlabs-stdlib'
