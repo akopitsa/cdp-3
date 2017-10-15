@@ -1,3 +1,7 @@
+# we can set another module directory
+# example
+# moduledir '/etc/puppetlabs/puppet/modules'
+
 # custom modules
 mod 'ngix',
   git: 'https://github.com/choonming/puppet-nginx.git'
