@@ -33,7 +33,7 @@ Vagrant.configure("2") do |config|
     echo ''':cachedir: '/var/cache/r10k'
 :sources:
   cdp:
-    remote: 'https://github.com/akopitsa/cdp1-control-repo.git'
+    remote: 'https://github.com/akopitsa/cdp-control-repo.git'
     basedir: '/etc/puppetlabs/code/environments'
     prefix: false
 ''' >> /etc/puppetlabs/puppet/r10k.yaml
