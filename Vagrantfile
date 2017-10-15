@@ -72,7 +72,15 @@ Vagrant.configure("2") do |config|
 #    gem install puppet_forge
 #    gem install semantic_puppet:0.1.0
 #    gem install r10k
-   /opt/puppetlabs/puppet/bin/gem install r10k
-#   /opt/puppetlabs/puppet/bin/r10k
+    /opt/puppetlabs/puppet/bin/gem install r10k
+    echo ''':cachedir: '/var/cache/r10k'
+:sources:
+  cdp:
+    remote: 'https://github.com/akopitsa/cdp1-control-repo.git'
+    basedir: '/etc/puppetlabs/code/environments'
+    prefix: false
+''' >> /etc/puppetlabs/puppet/r10k.yaml
+   /opt/puppetlabs/puppet/bin/r10k deploy environment production -pv -c /etc/puppetlabs/puppet/r10k.yaml
+   /opt/puppetlabs/puppet/bin/r10k deploy environment development -pv -c /etc/puppetlabs/puppet/r10k.yaml
    SHELL
 end
